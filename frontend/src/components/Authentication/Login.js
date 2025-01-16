@@ -100,14 +100,14 @@ const Login = () => {
       <Button
         colorScheme="blue"
         width="100%"
-        style={{ marginTop: 15 }}
+        style={{ marginTop: 15, backgroundColor: "blue", color: "white" }}
         onClick={submitHandler}
         isLoading={loading}
       >
         Login
       </Button>
       <Button
-        variant="solid"
+        style={{backgroundColor: "red", color: "white"}}
         colorScheme="red"
         width="100%"
         onClick={() => {
@@ -115,7 +115,7 @@ const Login = () => {
           setPassword("123456");
         }}
       >
-        Get Guest User Credentials
+        Guest Credentials
       </Button>
     </VStack>
   );

@@ -183,7 +183,7 @@ const Signup = () => {
       <Button
         colorScheme="blue"
         width="100%"
-        style={{ marginTop: 15 }}
+        style={{ marginTop: 15, backgroundColor: "blue", color: "white" }}
         onClick={submitHandler}
         isLoading={picLoading}
       >
