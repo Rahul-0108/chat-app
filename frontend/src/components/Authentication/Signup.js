@@ -98,7 +98,7 @@ const Signup = () => {
       try {
         // Initialize the BlobServiceClient with the storage account and SAS token
         const blobServiceClient = new BlobServiceClient(
-          `https://${"rahuljobportal"/* account name */}.blob.core.windows.net/?${/* sas token */"sv=2022-11-02&ss=bfqt&srt=sco&sp=rwdlacupiytfx&se=2025-11-05T15:39:13Z&st=2024-11-05T07:39:13Z&spr=https&sig=VNC%2FdPrxme0LrrlJ7qpeL7XV1GyDBH3%2BKNn2z3ytC20%3D"}`
+          `https://rahuljobportal1.blob.core.windows.net/?sv=2024-11-04&ss=bfqt&srt=sco&sp=rwdlacupiytfx&se=2026-07-08T18:30:38Z&st=2025-07-07T10:30:38Z&spr=https,http&sig=Ofjb%2FV7UMyK%2F89miGNULQSDKyah30ppzhVAHA7r0P6M%3D`
         );
 
         // Get container client
@@ -111,7 +111,7 @@ const Signup = () => {
         // Upload the file to Azure
         await blockBlobClient.uploadBrowserData(file);
         setPicLoading(false);
-        setPic(`https://rahuljobportal.blob.core.windows.net/myimages/${blobName}`);
+        setPic(`https://rahuljobportal1.blob.core.windows.net/myimages/${blobName}`);
       } catch (error) {
         console.error("Error uploading file: ", error.message);
         setPicLoading(false);
